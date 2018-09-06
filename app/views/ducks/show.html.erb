@@ -1,3 +1,4 @@
 <%= @duck.name %>
 <%= @duck.description %>
+<%= link_to @duck.student.name, @duck.student %>
 <%= button_to "Edit Duck", edit_duck_path(@duck), method: 'get' %>

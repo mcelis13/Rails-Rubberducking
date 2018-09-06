@@ -3,6 +3,6 @@
 <%= 'Student Mod' %>
 <%= @student.mod %><br>
 <% @student.ducks.each do |duck| %>
-  <%= duck.name %><br>
+  <%= link_to duck.name, duck %><br>
 <% end %>
 <%= button_to "Edit Student", edit_student_path(@student), method: "get" %>

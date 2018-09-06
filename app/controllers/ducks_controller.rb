@@ -28,7 +28,11 @@ class DucksController < ApplicationController
   def update
     @duck = Duck.find(params[:id])
     @duck.update(duck_params)
-    redirect_to @duck
+    if @duck.valid?
+      redirect_to @duck
+    else
+      render :edit
+    end
   end
 
   private
