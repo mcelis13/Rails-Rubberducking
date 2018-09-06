@@ -1,0 +1,8 @@
+<%= 'Student Name' %>
+<%= @student.name %><br>
+<%= 'Student Mod' %>
+<%= @student.mod %><br>
+<% @student.ducks.each do |duck| %>
+  <%= duck.name %><br>
+<% end %>
+<%= button_to "Edit Student", edit_student_path(@student), method: "get" %>
